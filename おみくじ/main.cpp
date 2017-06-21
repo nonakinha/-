@@ -1,15 +1,49 @@
-//
-//  main.cpp
-//  おみくじ
-//
-//  Created by 野中明 on 2016/02/22.
-//  Copyright © 2016年 practice. All rights reserved.
-//
+//おみくじ　コード
 
-#include <iostream>
+#include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+#include <stdlib.h>
+
+#include <time.h>
+
+
+
+int main(void) {
+    
+    int fortune_slip;
+    
+    
+    
+    printf("おみくじを引こう！　（「enter」キーを押してね。）\n");
+    
+    getchar();
+    
+    printf("今日の運勢は・・・\n");
+    
+    
+    
+    srand((unsigned)time(NULL));
+    
+    fortune_slip = rand()%10;
+    
+    
+    
+    if(fortune_slip >= 0 && fortune_slip <= 2){
+        
+        printf("\nおみくじの結果は　：　「大吉」です！！\n");
+        
+    }else if (fortune_slip >=3 && fortune_slip <= 4){
+        
+        printf("\nおみくじの結果は　：　「中吉」です！！\n");
+        
+    }else if (fortune_slip >=5 && fortune_slip <=6){
+        
+        printf("\nおみくじの結果は　：　「小吉」です！！\n");
+        
+    }else{
+        
+        printf("\nおみくじの結果は　：　「吉」です！！\n");
+        
+    }
+    
 }
